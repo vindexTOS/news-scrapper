@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE `News` MODIFY `title` LONGTEXT NOT NULL,
+    MODIFY `text` LONGTEXT NOT NULL;

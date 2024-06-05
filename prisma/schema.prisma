@@ -1,0 +1,33 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+// npx prisma migrate dev --name your_migration_name
+
+// npx prisma migrate deploy
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:258741@localhost:3306/news-scraper"
+}
+
+ 
+
+ 
+
+
+model News {
+   id           Int      @id @default(autoincrement()) 
+   web_site String 
+   title String @db.LongText
+   text String @db.LongText
+   image  String? @db.LongText
+   date String 
+  createdAt  DateTime   @default(now())
+
+}
